@@ -6,15 +6,28 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<form method="POST" action="login.jsp"></form>
-    <label for="username">Username</label>
-    <input id ="username" name="username" type="text">
+<%
+if("POST".equals(request.getMethod())) {
+    String username = request.getParameter("username");
+//    String password = request.getParameter("password");
+    if (username.equalsIgnoreCase("admin")) {
+
+        response.sendRedirect("profile.jsp");
+    }
+}
+
+
+%>
+
+<form method="POST" action="login.jsp">
+    <label for="username">username</label>
+    <input id ="username" name="username" type="text" placeholder="username">
     <br>
 
-    <label for="password">Password</label>
-    <input id="password" name="password" type="text">
+    <%--<label for="password">Password</label>--%>
+    <%--<input id="password" name="password" type="password" placeholder="password">--%>
     <br>
 
-    <input type="submit">
+    <button type="submit">submit</button>
 </form>
 
