@@ -38,8 +38,8 @@ public class HelloWorldServlet extends HttpServlet {
                 "} \n" +
                 "</style><h1 ><strong>Hello, World!</strong></h1>");
             out.println("<h1>What's your name?");
-            Scanner input  = new Scanner(System.in);
-            String userResponse = input.next();
+        out.println("<p> What is the name of you?</p>");
+        out.println("<form /action");
             out.println("<h1>Hello"+ userResponse);
 
 
