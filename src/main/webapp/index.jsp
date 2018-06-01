@@ -2,14 +2,21 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <jsp:include page="partials/head.jsp">
-        <jsp:param name="title" value="Welcome to my site!" />
-    </jsp:include>
+    <title><%= "some title" %></title>
+    <%@ include file="partials/head.jsp"%>
+    <%@ include file="partials/navbar.jsp"%>
+    <%--<%@ include file="./style.css"%>--%>
+
 </head>
 <body>
-    <jsp:include page="partials/navbar.jsp" />
-    <div class="container">
-        <h1>Welcome to the Adlister!</h1>
-    </div>
+    <c:if test="true">
+        <h1>This is Index.JSP</h1>
+    </c:if>
+    <%@ include file="login.jsp" %>
+    <c:if test="false">
+        <h1>single letter variable names are good</h1>
+    </c:if>
+
+
 </body>
 </html>
