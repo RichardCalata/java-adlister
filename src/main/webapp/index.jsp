@@ -3,15 +3,19 @@
 <html>
 <head>
     <title><%= "some title" %></title>
+    <%@ include file="partials/head.jsp"%>
+    <%@ include file="partials/navbar.jsp"%>
+    <%--<%@ include file="./style.css"%>--%>
+
 </head>
 <body>
     <c:if test="true">
-        <h1>Variable names should be very descriptive</h1>
+        <h1>This is Index.JSP</h1>
     </c:if>
+    <%@ include file="login.jsp" %>
     <c:if test="false">
         <h1>single letter variable names are good</h1>
     </c:if>
-    <%@ include file="login.jsp" %>
 
 
 </body>
