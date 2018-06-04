@@ -6,8 +6,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-@WebServlet (name = "loginServlet", urlPatterns = "/login")
-public class loginServlet extends HttpServlet {
+@WebServlet (name = "LoginServlet", urlPatterns = "/login")
+public class LoginServlet extends HttpServlet {
 
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
