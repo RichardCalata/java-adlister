@@ -6,12 +6,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-@WebServlet (name = "LoginServlet", urlPatterns = "/ads")
-public class LoginServlet extends HttpServlet {
+@WebServlet (name = "adsServlet", urlPatterns = "/ads")
+public class adsServlet extends HttpServlet {
 
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            req.getRequestDispatcher("ads/index.jsp");
+            req.getRequestDispatcher("/login");
     }
 
 
