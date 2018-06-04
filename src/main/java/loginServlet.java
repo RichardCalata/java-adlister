@@ -6,22 +6,24 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-@WebServlet (name = "adsServlet", urlPatterns = "/ads")
-public class adsServlet extends HttpServlet {
+@WebServlet (name = "loginServlet", urlPatterns = "/login")
+public class loginServlet extends HttpServlet {
 
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            req.getRequestDispatcher("/login");
+        req.getRequestDispatcher("/login.jsp").forward(req, resp);
     }
 
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        if (req.getMethod().equalsIgnoreCase("post")) {
-            String username = req.getParameter("username");
-            String password = req.getParameter("password");
-            if (username.equals("admin") && password.equals("password")) {
-                resp.sendRedirect("ads/index.jsp");
+        if (req.getMethod().equals("POST")) {
+            String username = req.getParameter("name");
+//            String password = req.getParameter("password");
+            if (username.equalsIgnoreCase("admin")) {
+                resp.sendRedirect("/profile");
             }
         }
+
+
     }
 }
