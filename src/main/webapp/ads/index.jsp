@@ -9,15 +9,16 @@
     </jsp:include>
     <title>View all Ads</title>
 </head>
-<body>
+<body >
 <jsp:include page="../partials/navbar.jsp" />
 <div class="container">
     <h1>Welcome! Welcome to the Ads/Index!</h1>
 </div>
-
+<div style="box-sizing: border-box; margin: 3em">
 <c:forEach var="ad" items="${ads}">
     <h1>${ad.title}</h1>
     <p>${ad.description}</p>
 </c:forEach>
+</div>
 </body>
 </html>
