@@ -10,7 +10,8 @@
 
     <div class="container">
         <h1>Hello ${sessionScope.user}!</h1>
-        <h1>Viewing your profile.</h1>
+        <h1>${signInReminder}</h1>
+        <h1>${signedInMessage}</h1>
     </div>
 
 </body>
