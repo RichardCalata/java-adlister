@@ -11,8 +11,8 @@ INSERT INTO users (username,email,password) VALUES
 ('Robert','Robert@NotSpicy.com','password'),
 ('Wayne','Wayne@Boots.com','password');
 
-INSERT INTO ads (title,description) VALUES
-('Playstation for sale','This is a slightly used playstation'),
-('uper Nintendo','Get your game on with this old-school classic!'),
-('Junior Java Developer Position','Minimum 7 years of experience required. You will be working in the scripting language for Java, JavaScript'),
-('JavaScript Developer needed','Must have strong Java skills');
+INSERT INTO ads (user_id,title,description) VALUES
+('2','Playstation for sale','This is a slightly used playstation'),
+('3','uper Nintendo','Get your game on with this old-school classic!'),
+('1','Junior Java Developer Position','Minimum 9 years of experience required. You will be working in the scripting language for Java, JavaScript'),
+('1','JavaScript Developer needed','Must have strong Java skills, Must read minds');

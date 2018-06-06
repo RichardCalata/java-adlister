@@ -1,5 +1,5 @@
 USE adlister_db;
-
+SET foreign_key_checks=0;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS ads;
 CREATE TABLE users(
@@ -17,8 +17,8 @@ id int unsigned not null auto_increment,
 user_id int unsigned,
 title varchar(100),
 description text(1000),
-PRIMARY KEY(id),
-FOREIGN KEY (user_id) REFERENCES users(id)
+FOREIGN KEY (user_id) REFERENCES users(id),
+PRIMARY KEY(id)
 
 )
 
