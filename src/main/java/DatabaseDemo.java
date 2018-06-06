@@ -8,8 +8,8 @@ public class DatabaseDemo {
 
         Connection connection = DriverManager.getConnection(
                 "jdbc:mysql://localhost/employees?serverTimezone=UTC",
-                "root",
-                "codeup"
+                "",
+                ""
         );
 
         Statement statement = connection.createStatement();
