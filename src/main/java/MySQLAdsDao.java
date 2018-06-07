@@ -20,7 +20,7 @@ public class MySQLAdsDao implements Ads {
 
 //        this.connection = connection;  I think I don't need this
     }
-
+Hello?
 
     @Override
     public List<Ad> all() {
