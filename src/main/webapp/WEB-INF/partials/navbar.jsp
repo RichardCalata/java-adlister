@@ -6,7 +6,6 @@
         </div>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="/ads/create">Post your ad</a></li>
-            <li><a href="/ads/delete">Delete your ad</a></li>
             <li><a href="/login">Login</a></li>
             <li><a href="/logout">Logout</a></li>
         </ul>

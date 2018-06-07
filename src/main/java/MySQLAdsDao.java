@@ -1,5 +1,5 @@
-import com.mysql.cj.api.mysqla.result.Resultset;
-import com.mysql.cj.api.mysqla.result.ResultsetRow;
+//import com.mysql.cj.api.mysqla.result.Resultset;
+//import com.mysql.cj.api.mysqla.result.ResultsetRow;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -7,7 +7,7 @@ import java.util.List;
 
 public class MySQLAdsDao implements Ads {
 
-    private Connection connection = null;
+    private Connection connection;
 
     public MySQLAdsDao(Config config) throws SQLException {
 
@@ -18,13 +18,13 @@ public class MySQLAdsDao implements Ads {
         String password = config.getPassword();
         connection = DriverManager.getConnection(url, username, password);
 
-        this.connection = connection;
+//        this.connection = connection;  I think I don't need this
     }
 
 
     @Override
     public List<Ad> all() {
-        Statement stmt = null;
+        Statement stmt;
         try {
             stmt = connection.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM ads");

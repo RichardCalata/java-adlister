@@ -18,15 +18,16 @@ public class DeleteAdsServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Ad ad = new Ad(1,
-                request.getParameter()
-                )
-        try {
-            DaoFactory.getAdsDao().delete(Ad.getId());
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        response.sendRedirect("/ads");
+//        Ad ad = new Ad(1,
+//                request.getAttribute().
+//                )
+//        try {
+//            DaoFactory.getAdsDao().delete(Ad.getId());
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        response.sendRedirect("/ads");
+
 
     }
 }
