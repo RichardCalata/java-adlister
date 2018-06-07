@@ -40,13 +40,13 @@ public class MySQLAdsDao implements Ads {
     @Override
     public Long insert(Ad ad) {
         try {
-            String sql = "INSERT INTO ads(user_id, title, description) VALUES ( '%?%','%?%','%?%')";
+            String sql = "INSERT INTO ads(user_id, title, description) VALUES ( ? ,? , ? )";
 
             PreparedStatement stmt = connection.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
-            stmt.setString(1, String.valueOf(ad.getUserId()));
+            stmt.setLong(1, ad.getUserId() );
             stmt.setString(2, ad.getTitle());
             stmt.setString(3, ad.getDescription());
-            stmt.executeUpdate(createInsertQuery(ad), Statement.RETURN_GENERATED_KEYS);
+            stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
             return rs.getLong(1);
@@ -55,10 +55,10 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-    private String createInsertQuery(Ad ad) {
-
-        return "INSERT INTO ads(user_id, title, description) VALUES ( '%?%','%?%','%?%')";
-    }
+//    private String createInsertQuery(Ad ad) {
+//
+//        return "INSERT INTO ads(user_id, title, description) VALUES ( %?%,%?%,%?%)";
+//    }
 
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
