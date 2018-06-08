@@ -7,6 +7,7 @@
         <ul class="nav navbar-nav navbar-right">
             <li><a href="/ads/create">Create new ad</a></li>
             <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
             <li><a href="/logout">Logout</a></li>
         </ul>
     </div><!-- /.navbar-collapse -->
