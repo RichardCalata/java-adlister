@@ -10,10 +10,7 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <form action="/register" method="POST">
-    <div class="form-group">
-        <label for="userid">Userid</label>
-        <input id="userid" name="userid" class="form-control" type="text">
-    </div>
+
     <div class=form-group">
         <label for="username">Username</label>
         <input id="username" name="username" class="form-control" type="text">
