@@ -26,20 +26,20 @@ public class RegisterServlet extends HttpServlet {
         String hash = BCrypt.hashpw("password", BCrypt.gensalt(numberOfRounds));
         password = hash;
 
-        // validate input
-//        boolean inputHasErrors = username.isEmpty()
-//            || email.isEmpty()
-//            || password.isEmpty()
-//            || (! password.equals(passwordConfirmation));
-//
-//        if (inputHasErrors) {
-//            response.sendRedirect("/register");
-//            return;
-//        }
+//         validate input
+        boolean inputHasErrors = username.isEmpty()
+            || email.isEmpty()
+            || password.isEmpty();
 
-        // create and save a new user
-        User user = new User(username, email, password);
-        DaoFactory.getUsersDao().insert(user);
-        response.sendRedirect("/login");
+        if (inputHasErrors) {
+            response.sendRedirect("/register");
+            return;
+        }else {
+
+            // create and save a new user
+            User user = new User(username, email, password);
+            DaoFactory.getUsersDao().insert(user);
+            response.sendRedirect("/login");
+        }
     }
 }
